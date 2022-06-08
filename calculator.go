@@ -18,15 +18,19 @@ func main() {
 
 	if operation == "+" {
 		result = num1 + num2
-	}
-	if operation == "-" {
+	} else if operation == "-" {
 		result = num1 - num2
-	}
-	if operation == "/" {
+	} else if operation == "/" {
+		if num2 == 0 {
+			fmt.Println("Number is not Divided by Zero")
+			return
+		}
 		result = num1 / num2
-	}
-	if operation == "*" {
+	} else if operation == "*" {
 		result = num1 * num2
+	} else {
+		fmt.Println("operation in not supported please enter +,-, * or / operation")
+		return
 	}
 	fmt.Println("The result is: ", result)
 }
